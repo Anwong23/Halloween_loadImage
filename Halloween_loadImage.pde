@@ -1,24 +1,20 @@
 //Click and Drag your cursor to "carve" the pumpkins
 
-PImage img;
+PImage Img;
+PImage Crystal;
 
 void setup() {
-  size(800, 500);
-  img = loadImage("pumpkins.png");
-  image(img, 0, 0);
+  size(1000,1000);
+  Crystal = loadImage("crystal.jpg");
+  Img = loadImage("ufo.png");
 }
+  
+  
+void draw() {
 
-void draw() 
-{
-  save("YOURNAME.Halloween.png");
-}
+  image(Crystal,0,0);
+  image(Img,500,200);
 
-void mouseDragged()
-{
-  //"Carves" the pumpkins
-  //blendMode optional, might be problematic with a light or white background
-  blendMode(OVERLAY); 
-  noStroke();
-  fill(255, 200, 25);
-  ellipse(mouseX, mouseY, 5, 5);
-}
+//save function
+save("ANDREW.Reference.png");
+} 
